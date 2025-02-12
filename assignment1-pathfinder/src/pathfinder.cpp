@@ -71,7 +71,7 @@ int main()
 
     ClearBackground(LIGHTGRAY);
 
-    draw_graph(g);
+    draw_graph(g, start, end);
 
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
     {

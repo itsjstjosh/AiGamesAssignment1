@@ -4,6 +4,9 @@
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{A732DE3F-BFBE-37C8-9009-EA05C0178D1B}|src\\pathfinder.vcxproj|C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A732DE3F-BFBE-37C8-9009-EA05C0178D1B}|src\\pathfinder.vcxproj|C:\\USERS\\KYNAN\\DOCUMENTS\\GITHUB\\AIGAMESASSIGNMENT1\\ASSIGNMENT1-PATHFINDER\\SRC\\GRAPH-UTILS.HPP||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,8 +16,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "graph-utils.hpp",
+              "DocumentMoniker": "C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\graph-utils.hpp",
+              "RelativeDocumentMoniker": "..\\src\\graph-utils.hpp",
+              "ToolTip": "C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\graph-utils.hpp*",
+              "RelativeToolTip": "..\\src\\graph-utils.hpp*",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAYwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-12T13:51:20.777Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -23,7 +39,7 @@
               "RelativeDocumentMoniker": "..\\src\\pathfinder.cpp",
               "ToolTip": "C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp*",
               "RelativeToolTip": "..\\src\\pathfinder.cpp*",
-              "ViewState": "AgIAADgAAAAAAAAAAAAYwFEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAYwEkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-12T12:27:27.872Z",
               "EditorCaption": ""

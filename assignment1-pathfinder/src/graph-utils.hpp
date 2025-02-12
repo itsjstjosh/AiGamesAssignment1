@@ -78,19 +78,26 @@ void draw_cost_line(const node_t& n1, const node_t& n2, const unsigned int cost)
   DrawTextPro(font, text, mid, tsz/2, rot, font_size, spacing, BROWN);
 }
 
-void draw_graph(Graph& g)
+void draw_graph(Graph& g, node_t start, node_t end) // Added node_t start and node_t end
 {
-  for (const auto& [edge, dcost] : edge_info)
-  {
-    const auto& [n1, n2] = edge;
-    const unsigned int cost = static_cast<unsigned int>(dcost);
-    draw_cost_line(n1, n2, cost);
-  }
+    for (const auto& [edge, dcost] : edge_info)
+    {
+        const auto& [n1, n2] = edge;
+        const unsigned int cost = static_cast<unsigned int>(dcost);
+        draw_cost_line(n1, n2, cost);
+    }
 
-  for (const auto& [node, coord] : node_info)
-  {
-    DrawCircleV(coord, node_radius, BLACK);
-  }
+    for (const auto& [node, coord] : node_info)
+    {
+        Color node_color = BLACK;
+
+        if (node == start)
+            node_color = GREEN;
+        else if (node == end)
+            node_color = RED;
+
+        DrawCircleV(coord, node_radius, node_color);
+    }
 }
 
 #endif // _GRAPH_UTILS_HPP_
