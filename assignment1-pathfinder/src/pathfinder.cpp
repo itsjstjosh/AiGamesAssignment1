@@ -80,6 +80,12 @@ int main()
         // *opt is a node_t
       }
     }
+                                       
+
+    DrawText(TextFormat("Score: ", score), 10, 10, 20, RAYWHITE);
+    DrawText(TextFormat("Tokens: ", tokens), 10, 40, 20, RAYWHITE);
+    DrawText(TextFormat("High Score: ", high_score), 10, 70, 20, RAYWHITE);
+    DrawText(TextFormat("Time: ", t), 10, 100, 20, RAYWHITE);
 
     EndDrawing();
   }
