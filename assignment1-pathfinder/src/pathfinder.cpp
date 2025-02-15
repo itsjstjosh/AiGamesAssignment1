@@ -7,6 +7,7 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <AudioDevice.hpp>
 
 std::vector<node_t> astar_pathfind(const Graph& g, node_t start, node_t goal)
 {
@@ -34,8 +35,11 @@ unsigned int path_cost(const std::vector<node_t>& path)
 
 int main()
 {
+
   const int w{ 2880/2 }, h{ 1620/2 }, half_w{ w/2 }, half_h{ h/2 }, gap{ w/8 };
   raylib::Window window{ w, h, "Pathfinder" };
+  raylib::AudioDevice audio; // Initialize audio device
+  //raylib::Sound node_add_sound("coin.wav");
 
   SetTargetFPS(60);
 
@@ -73,12 +77,30 @@ int main()
 
     draw_graph(g, start, end);
 
+
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
     {
-      if (auto opt = get_nearby_node(GetMousePosition()))
-      {
-        // *opt is a node_t
-      }
+        if (auto opt = get_nearby_node(GetMousePosition()))
+        {
+            // *opt is a node_t
+            node_t clicked_node = *opt;
+
+            player_path.push_back(*opt); // Add the node to the player's path
+            //PlaySound (node_add_sound);
+
+        }
+    }
+
+    if (player_path.size() >= 2) // Copied from raylib-redblob.cpp 
+    {
+        for (int i = 1; i < player_path.size(); i++)
+        {
+            const node_t n1 = player_path[i - 1];
+            const node_t n2 = player_path[i];
+            const coord_t& coord_n1 = node_info[n1];
+            const coord_t& coord_n2 = node_info[n2];
+            DrawLineEx(coord_n1, coord_n2, line_thickness * 2, RED);
+        }
     }
                                        
 
@@ -89,6 +111,8 @@ int main()
 
     EndDrawing();
   }
+
+  CloseAudioDevice();
 
   return 0;
 }
