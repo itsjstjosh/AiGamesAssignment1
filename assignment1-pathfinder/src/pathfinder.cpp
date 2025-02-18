@@ -33,6 +33,7 @@ unsigned int path_cost(const std::vector<node_t>& path)
   return static_cast<unsigned int>(dcost);
 }
 
+
 int main()
 {
 
@@ -67,6 +68,8 @@ int main()
   std::vector<node_t> player_path{};
   node_t start = 'A';
   node_t end   = 'G';
+  player_path.push_back(start);
+  //player_path.back();
   int tokens{2000}, score{}, high_score{}; // try with more/less tokens?
 
   while (!window.ShouldClose()) // Detect window close button or ESC key
@@ -83,8 +86,6 @@ int main()
         if (auto opt = get_nearby_node(GetMousePosition()))
         {
             // *opt is a node_t
-            node_t clicked_node = *opt;
-
             player_path.push_back(*opt); // Add the node to the player's path
             PlaySound (node_add_sound);
 

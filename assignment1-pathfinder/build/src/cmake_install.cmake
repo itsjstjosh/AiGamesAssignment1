@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/B00798403/Documents/github/AiGamesAssignment1/assignment1-pathfinder/src
+# Install script for directory: C:/Users/B00990311/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
