@@ -1,6 +1,6 @@
-^C:\USERS\KYNAN\DOCUMENTS\GITHUB\AIGAMESASSIGNMENT1\ASSIGNMENT1-PATHFINDER\BUILD\CMAKEFILES\20CE68AEB4696097D7F11963ADCF9AFD\GENERATE.STAMP.RULE
+^C:\USERS\B00990311\DOCUMENTS\GITHUB\AIGAMESASSIGNMENT1\ASSIGNMENT1-PATHFINDER\BUILD\CMAKEFILES\0B2EE3633643AE6613D61FBA690AAE2F\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/kynan/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder -BC:/Users/kynan/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/kynan/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/build/pathfinder.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/B00990311/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder -BC:/Users/B00990311/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/B00990311/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/build/pathfinder.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

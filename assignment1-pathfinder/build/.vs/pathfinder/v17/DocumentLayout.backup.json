@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\build\\",
+  "WorkspaceRootPath": "C:\\Users\\B00990311\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\build\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A732DE3F-BFBE-37C8-9009-EA05C0178D1B}|src\\pathfinder.vcxproj|C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2E586801-9318-33CF-A434-CF51BFC08148}|src\\pathfinder.vcxproj|C:\\Users\\B00990311\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,18 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "pathfinder.cpp",
-              "DocumentMoniker": "C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp",
+              "DocumentMoniker": "C:\\Users\\B00990311\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp",
               "RelativeDocumentMoniker": "..\\src\\pathfinder.cpp",
-              "ToolTip": "C:\\Users\\kynan\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp*",
-              "RelativeToolTip": "..\\src\\pathfinder.cpp*",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAYwFkAAABJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\B00990311\\Documents\\GitHub\\AiGamesAssignment1\\assignment1-pathfinder\\src\\pathfinder.cpp",
+              "RelativeToolTip": "..\\src\\pathfinder.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACoAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T12:27:27.872Z",
+              "WhenOpened": "2025-02-18T14:03:41.365Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

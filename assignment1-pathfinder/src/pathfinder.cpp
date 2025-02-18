@@ -39,7 +39,7 @@ int main()
   const int w{ 2880/2 }, h{ 1620/2 }, half_w{ w/2 }, half_h{ h/2 }, gap{ w/8 };
   raylib::Window window{ w, h, "Pathfinder" };
   raylib::AudioDevice audio; // Initialize audio device
-  //raylib::Sound node_add_sound("coin.wav");
+  raylib::Sound node_add_sound("../../deps/raylib-cpp/examples/audio/resources/coin.wav");
 
   SetTargetFPS(60);
 
@@ -86,7 +86,7 @@ int main()
             node_t clicked_node = *opt;
 
             player_path.push_back(*opt); // Add the node to the player's path
-            //PlaySound (node_add_sound);
+            PlaySound (node_add_sound);
 
         }
     }

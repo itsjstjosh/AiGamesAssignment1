@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\kynan\Documents\GitHub\AiGamesAssignment1\assignment1-pathfinder\src\pathfinder.cpp">
+    <ClCompile Include="C:\Users\B00990311\Documents\GitHub\AiGamesAssignment1\assignment1-pathfinder\src\pathfinder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\kynan\Documents\GitHub\AiGamesAssignment1\assignment1-pathfinder\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\B00990311\Documents\GitHub\AiGamesAssignment1\assignment1-pathfinder\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{675C330F-EDC5-3B79-83E4-3DBC1A4EE993}</UniqueIdentifier>
+      <UniqueIdentifier>{F37B0961-3BA2-3AD2-8317-EFE1A0E10179}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
