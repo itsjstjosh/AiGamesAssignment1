@@ -105,10 +105,10 @@ int main()
     }
                                        
 
-    DrawText(TextFormat("Score: ", score), 10, 10, 20, RAYWHITE);
-    DrawText(TextFormat("Tokens: ", tokens), 10, 40, 20, RAYWHITE);
-    DrawText(TextFormat("High Score: ", high_score), 10, 70, 20, RAYWHITE);
-    DrawText(TextFormat("Time: ", t), 10, 100, 20, RAYWHITE);
+    DrawText(TextFormat("Score: %d", score), 10, 10, 20, RAYWHITE);
+    DrawText(TextFormat("Tokens: %d", tokens), 10, 40, 20, RAYWHITE);
+    DrawText(TextFormat("High Score: %d", high_score), 10, 70, 20, RAYWHITE);
+    DrawText(TextFormat("Time: %d", t), 10, 100, 20, RAYWHITE);
 
     EndDrawing();
   }
