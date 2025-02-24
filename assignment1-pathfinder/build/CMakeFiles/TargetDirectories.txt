@@ -1,3 +1,3 @@
-C:/Users/kynan/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/kynan/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/kynan/Documents/GitHub/AiGamesAssignment1/assignment1-pathfinder/build/src/CMakeFiles/pathfinder.dir
+C:/Users/Joshf/Documents/uni/3rd year/github/AiGamesAssignment1/assignment1-pathfinder/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Joshf/Documents/uni/3rd year/github/AiGamesAssignment1/assignment1-pathfinder/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Joshf/Documents/uni/3rd year/github/AiGamesAssignment1/assignment1-pathfinder/build/src/CMakeFiles/pathfinder.dir

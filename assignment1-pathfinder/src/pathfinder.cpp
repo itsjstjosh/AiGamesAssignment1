@@ -69,7 +69,6 @@ int main()
   node_t start = 'A';
   node_t end   = 'G';
   player_path.push_back(start);
-  //player_path.back();
   int tokens{2000}, score{}, high_score{}; // try with more/less tokens?
 
   while (!window.ShouldClose()) // Detect window close button or ESC key
@@ -83,11 +82,34 @@ int main()
 
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
     {
+        
         if (auto opt = get_nearby_node(GetMousePosition()))
         {
+
+            node_t current = player_path.back();
+            node_t next = *opt;
+            
+            //the code before the && stops the player from clicking previously clicked nodes, idk if we should keep that or not
+            if (std::find(player_path.begin(), player_path.end(), next) == player_path.end() && edge_info.find(std::make_pair(current, next)) != edge_info.end()) //got this working after 3 hours of google and frankensteining code -J
+            {
+                player_path.push_back(*opt); // Add the node to the player's path
+                PlaySound (node_add_sound);
+
+                tokens = tokens - 500; //remove tokens if the next node is succesfully clicked -j
+
+            }
+            
+            if (current == next) 
+            {
+                if (current != start) 
+                {
+                    player_path.pop_back();
+                    tokens = tokens + 500; //add tokens if the node is unselected -j
+
+                }
+            }
+
             // *opt is a node_t
-            player_path.push_back(*opt); // Add the node to the player's path
-            PlaySound (node_add_sound);
 
         }
     }
