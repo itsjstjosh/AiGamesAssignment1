@@ -9,6 +9,13 @@
 #include <unordered_map>
 #include <AudioDevice.hpp>
 
+//for time delay
+#include <iostream>
+#include <chrono>
+#include <thread>
+using namespace std;
+
+
 std::vector<node_t> astar_pathfind(const Graph& g, node_t start, node_t goal)
 {
   std::unordered_map<node_t, node_t> came_from;
@@ -32,6 +39,7 @@ unsigned int path_cost(const std::vector<node_t>& path)
 
   return static_cast<unsigned int>(dcost);
 }
+
 
 
 int main()
@@ -72,6 +80,8 @@ int main()
   int tokens{2000}, score{}, high_score{}; // try with more/less tokens?
   int tokenCost= 0;
 
+  bool gameNeedsReset = false;
+
   while (!window.ShouldClose()) // Detect window close button or ESC key
   {
     BeginDrawing();
@@ -79,6 +89,8 @@ int main()
     ClearBackground(LIGHTGRAY);
 
     draw_graph(g, start, end);
+
+    //astar_pathfind(g, start, end);
 
     
 
@@ -123,6 +135,37 @@ int main()
                 }
             }
             
+            if (next == end) 
+            {
+                //calculate the ideal cost - j
+                std:: vector<node_t> idealPath = astar_pathfind(g, start, end);
+                int idealCost = path_cost(idealPath);
+            
+                //calculate the players path cost - j
+                int playersCost = path_cost(player_path);
+
+                if (playersCost == idealCost) 
+                {
+                    score = score + idealCost;
+                }
+                else if (playersCost > idealCost) 
+                { 
+                    //gets the ammount spent over the ideal cost so it can be subtracted - j
+                    int PlayersOverSpending = playersCost - idealCost;
+
+                    //subtracts the ammount over the ideal cost from the ideal cost so the player is punished the more they go over the ideal cost. - j
+                    score = score + idealCost - PlayersOverSpending;   
+                    
+                    if (score < 0) 
+                    {
+                        score = 0; //stops the player getting negative scores
+                    }
+                }
+
+                player_path.clear();
+                player_path.push_back(start);
+                tokens = 2000;
+            }
             
 
             // *opt is a node_t
