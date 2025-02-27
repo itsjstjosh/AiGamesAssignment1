@@ -47,8 +47,8 @@ int main()
 
   const int w{ 2880/2 }, h{ 1620/2 }, half_w{ w/2 }, half_h{ h/2 }, gap{ w/8 };
   raylib::Window window{ w, h, "Pathfinder" };
-  raylib::AudioDevice audio; // Initialize audio device
-  raylib::Sound node_add_sound("../../deps/raylib-cpp/examples/audio/resources/coin.wav");
+  raylib::AudioDevice audio; // Initialize audio device - k
+  raylib::Sound node_add_sound("../../deps/raylib-cpp/examples/audio/resources/coin.wav"); // Add audio from path - k
 
   SetTargetFPS(60);
 
@@ -81,6 +81,7 @@ int main()
   int tokenCost= 0;
 
   bool gameNeedsReset = false;
+  double startTime = GetTime();
 
   while (!window.ShouldClose()) // Detect window close button or ESC key
   {
@@ -92,6 +93,14 @@ int main()
 
     //astar_pathfind(g, start, end);
 
+    if (GetTime() - startTime >= 1.0f) // Timer countdown each second using GetTime() from raylib-cpp - k
+    {
+        if (t > 0) // Prevent negative time - k
+        {
+            t--; // Decrease t (time) by 1 
+        }
+        startTime = GetTime(); 
+    }
     
 
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
@@ -161,10 +170,10 @@ int main()
                         score = 0; //stops the player getting negative scores
                     }
                 }
-
                 player_path.clear();
-                player_path.push_back(start);
+                player_path.push_back(start); // Add clicked node to player path - k
                 tokens = 2000;
+                t = 60; // Reset timer to 60 - k
             }
             
 
@@ -173,7 +182,7 @@ int main()
         }
     }
 
-    if (player_path.size() >= 2) // Copied from raylib-redblob.cpp 
+    if (player_path.size() >= 2) // Copied from raylib-redblob.cpp - k
     {
         for (int i = 1; i < player_path.size(); i++)
         {
@@ -185,7 +194,7 @@ int main()
         }
     }
                                        
-
+    // Adds text of score, tokens, high score and time to the window in white colour - k
     DrawText(TextFormat("Score: %d", score), 10, 10, 20, RAYWHITE);
     DrawText(TextFormat("Tokens: %d", tokens), 10, 40, 20, RAYWHITE);
     DrawText(TextFormat("High Score: %d", high_score), 10, 70, 20, RAYWHITE);

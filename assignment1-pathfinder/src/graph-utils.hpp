@@ -78,7 +78,7 @@ void draw_cost_line(const node_t& n1, const node_t& n2, const unsigned int cost)
   DrawTextPro(font, text, mid, tsz/2, rot, font_size, spacing, BROWN);
 }
 
-void draw_graph(Graph& g, node_t start, node_t end) // Added node_t start and node_t end
+void draw_graph(Graph& g, node_t start, node_t end) // Added node_t start and node_t end - k
 {
     for (const auto& [edge, dcost] : edge_info)
     {
@@ -89,12 +89,12 @@ void draw_graph(Graph& g, node_t start, node_t end) // Added node_t start and no
 
     for (const auto& [node, coord] : node_info)
     {
-        Color node_color = BLACK;
+        Color node_color = BLACK; // Nodes are coloured black - k
 
-        if (node == start)
-            node_color = GREEN;
+        if (node == start) 
+            node_color = GREEN; // Start node is coloured green - k
         else if (node == end)
-            node_color = RED;
+            node_color = RED; // End node is coloured red - k
 
         DrawCircleV(coord, node_radius, node_color);
     }
