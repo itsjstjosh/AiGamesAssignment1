@@ -102,14 +102,18 @@ int main()
         startTime = GetTime(); 
     }
 
-        if (t <= 0 || tokens < 0) //checks if tokens or t is zero before commencing
+    if (t <= 0 || tokens < 0) //checks if tokens or t is zero before commencing
     {
         if (score > high_score)
         {
             high_score = score; //sets new high score if latest score is higher than previous high score
         }
 
-        score = 0; tokens = 2000; t = 60; player_path = { start }; //resets score and tokens for new game to start
+        score = 0;
+        tokens = 2000;
+        t = 60;
+        player_path.clear();
+        player_path.push_back(start); //resets score and tokens for new game to start
     }
     
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
