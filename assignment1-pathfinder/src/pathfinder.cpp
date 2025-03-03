@@ -8,6 +8,7 @@
 #include <string>
 #include <unordered_map>
 #include <AudioDevice.hpp>
+#include <random>
 
 //for time delay
 #include <iostream>
@@ -72,6 +73,7 @@ int main()
   add_double_edge(g, 'C', 'G');
   add_double_edge(g, 'F', 'G');
 
+  std::vector<node_t> nodes = { 'A', 'B', 'C', 'D', 'E', 'F', 'G' }; //all nodes (list)
   int t{60}; // time
   std::vector<node_t> player_path{};
   node_t start = 'A';
@@ -187,6 +189,10 @@ int main()
                 player_path.push_back(start); // Add clicked node to player path - k
                 tokens = 2000;
                 t = 60; // Reset timer to 60 - k
+                                  start = nodes[rand() % nodes.size()];
+                    end = nodes[rand() % nodes.size()];
+                    while (start == end) {  //start and end are not the same node
+                        end = nodes[rand() % nodes.size()];
             }
             
 
