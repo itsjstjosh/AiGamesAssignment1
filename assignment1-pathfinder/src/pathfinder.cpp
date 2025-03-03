@@ -111,6 +111,15 @@ int main()
                 high_score = score; //sets new high score if latest score is higher than previous high score
             }
 
+            start = nodes[rand() % nodes.size()];
+            end = nodes[rand() % nodes.size()];
+
+            
+            if (start == end)
+            {  
+                end = nodes[rand() % nodes.size()];
+            }
+
             score = 0;
             tokens = 2000;
             t = 60;
